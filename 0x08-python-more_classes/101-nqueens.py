@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 import sys
 
 
@@ -19,7 +18,6 @@ def board_deepcopy(board):
 
 
 def get_solution(board):
-    """Return the list of lists representation of a solved chessboard."""
     solution = []
     for r in range(len(board)):
         for c in range(len(board)):
@@ -30,7 +28,6 @@ def get_solution(board):
 
 
 def xout(board, row, col):
-    
     # X out all forward spots
     for c in range(col + 1, len(board)):
         board[row][c] = "x"
