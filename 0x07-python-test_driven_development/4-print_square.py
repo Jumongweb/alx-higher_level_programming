@@ -1,11 +1,21 @@
 #!/usr/bin/python3
-"""say my name function"""
+"""Defines a square-printing function."""
 
 
-def say_my_name(first_name, last_name=""):
-    """say my name function"""
-    if not isinstance(first_name, str):
-        raise TypeError("first_name must be a string")
-    if not isinstance(last_name, str):
-        raise TypeError("last_name must be a string")
-    print(f"My name is {first_name} {last_name}")
+def print_square(size):
+    """Print a square with the # character.
+
+    Args:
+        size (int): The height/width of the square.
+    Raises:
+        TypeError: If size is not an integer.
+        ValueError: If size is < 0
+    """
+    if not isinstance(size, int):
+        raise TypeError("size must be an integer")
+    if size < 0:
+        raise ValueError("size must be >= 0")
+
+    for i in range(size):
+        [print("#", end="") for j in range(size)]
+        print("")
