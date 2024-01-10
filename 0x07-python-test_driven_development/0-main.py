@@ -1,13 +1,15 @@
 #!/usr/bin/python3
-"""Defines a matrix multiplication function using NumPy."""
-import numpy as np
+add_integer = __import__('0-add_integer').add_integer
 
-
-def lazy_matrix_mul(m_a, m_b):
-    """Return the multiplication of two matrices.
-    Args:
-        m_a (list of lists of ints/floats): The first matrix.
-        m_b (list of lists of ints/floats): The second matrix.
-    """
-
-    return (np.matmul(m_a, m_b))
+print(add_integer(1, 2))
+print(add_integer(100, -2))
+print(add_integer(2))
+print(add_integer(100.3, -2))
+try:
+    print(add_integer(4, "School"))
+except Exception as e:
+    print(e)
+try:
+    print(add_integer(None))
+except Exception as e:
+    print(e)
