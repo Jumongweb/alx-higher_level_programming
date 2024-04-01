@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """function that finds a peak of the array"""
 
-
 def find_peak(list_of_integers):
     """find a peak"""
     if len(list_of_integers) == 1:
